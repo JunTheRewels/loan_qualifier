@@ -108,8 +108,11 @@ def save_qualifying_loans(qualifying_loans):
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    # @TODO: Complete the usability dialog for saving the CSV Files.
+    with open(csvpath, 'w', newline='') as csvfile:
+    csvwriter = csv.writer(csvfile)
+    for row in data:
+        csvwriter.writerow(row.values())
 
 
 def run():
